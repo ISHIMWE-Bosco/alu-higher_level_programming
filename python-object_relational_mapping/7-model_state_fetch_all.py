@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-    A script that lists all State objects from the database hbtn_0e_6_usa
+    Python script that lists all the sttates objects
+    from the database hbtn_0e_6_usa
 """
 
 
@@ -19,7 +20,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session()
-
     states = session.query(State).order_by(State.id).all()
 
     for state in states:
